@@ -1,5 +1,5 @@
-(asdf:defsystem #:lista-5
+(asdf:defsystem #:lista
   :license "Specify license here"
   :serial t
   :components ((:file "package")
-               (:file "lista-5")))
+               (:file "answers")))

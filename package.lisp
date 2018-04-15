@@ -1,3 +1,3 @@
 
-(defpackage #:lista-5
+(defpackage #:lista
   (:use #:cl))

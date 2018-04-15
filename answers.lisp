@@ -1,4 +1,4 @@
-(in-package :lista-5)
+(in-package :lista)
 
 ;; (defmacro while (test &body body)
 ;;   (let ((gtop (gensym))
