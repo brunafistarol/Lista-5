@@ -1,0 +1,16 @@
+language: common-lisp
+sudo: required
+
+env:
+  matrix:
+    - LISP=clisp
+
+install:
+  # Install cl-travis
+  - curl -L https://github.com/luismbo/cl-travis/raw/master/install.sh | sh
+  - git clone https://github.com/classroom-ed/Lista-4-tests.git ~/lisp/Lista-4-tests
+
+script:
+  - cl -e '(ql:quickload :lista-5/tests)
+           (unless (lista-5-testes:test-lista-5)
+             (uiop:quit 1))'

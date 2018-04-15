@@ -1,0 +1,34 @@
+#+Title: Lista 4
+
+Aluno: *<SEU NOME AQUI>*
+
+Antes de implementar, tenha certeza de ter terminado de fazer os
+exercícios manualmente, usando papel e caneta.
+
+Os exercícios são: 4.1, 4.2, 4.5, 4.11, 4.13, 4.18.
+
+Observações:
+
+1. Não esqueça de *atualizar seu nome* acima!! 
+2. Para o Dijkstra e bfs, vcs podem ter um [[https://github.com/fcbr/graph-algorithms/blob/master/graph-algorithms.lisp][ponto de partida]], notem a
+   [[https://github.com/fcbr/graph-algorithms/blob/master/graph-algorithms.lisp#L89-L90][observação]] e a [[https://github.com/fcbr/graph-algorithms/blob/master/graph-algorithms.lisp#L113][linha]]. O que vcs precisam alterar aqui para termos o
+   Dijkstra como apresentado no livro. Notem ainda o uso de uma
+   biblioteca para implementação da [[https://github.com/fcbr/graph-algorithms/blob/master/graph-algorithms.lisp#L94][fila de prioridades]]. [[https://github.com/fcbr/graph-algorithms/blob/master/graph-algorithms.asd][Aqui]] é a
+   definição da biblioteca onde as outras biblioteca ‘importadas’ são
+   definidas:
+3. Usando estes códigos como ponto de partida, vcs não precisam
+   reimplementar a [[https://en.wikipedia.org/wiki/Priority_queue][fila de prioridade]]. A implementação mais próxima da
+   fila de prioridade que vimos no livro é a [[https://github.com/sfrank/minheap/blob/master/binary-heap.lisp][binary-heap]].
+4. Seus testes podem usar os exemplos abaixo, mas sempre que possível
+   realize outros testes, a avalição final da lista será feita com
+   outros testes além dos apresentados abaixo ou nos exercícios do
+   livro.
+
+#+BEGIN_QUOTE
+While priority queues are often implemented with heaps, they are
+conceptually distinct from heaps. A priority queue is an abstract
+concept like "a list" or "a map"; just as a list can be implemented
+with a linked list or an array, a priority queue can be implemented
+with a heap or a variety of other methods such as an unordered array.
+#+END_QUOTE
+
