@@ -57,3 +57,52 @@
     (lambda () (incf clock))))
 
 
+(defun question-4.1-a ()
+  '((0 (0 inf inf inf inf inf inf inf))
+    (1 "...")))
+
+
+(defun question-4.1-b ()
+  "A arvore a seguir e a apresentada na figura 4.1 do livro."
+  '(S (A B) C D E))
+
+
+(defun question-4.2-a ()
+  '((0 (0 inf inf inf inf inf inf inf inf inf))
+    (1 "...")))
+
+
+(defun question-4.2-b ()
+  "A arvore a seguir e a apresentada na figura 4.1 do livro."
+  '(S (A B) C D E))
+
+
+(defun question-4.5 (graph-as-lists source target)
+  "O output deve ser a quantidade dos menores caminhos entre 
+   os dois nos.")
+
+
+(defun question-11 (graph-as-lists)
+  "O output deve ser o tamanho do menor ciclo ou nil se o grafo
+   for aciclico.")
+
+
+(defun question-4.13-a (graph-as-lists source target)
+  "O output deve ser t se o carro consegue chegar a cidade 
+  target e nil, caso contrtraio ")
+
+
+(defun question-4.13-b (graph-as-lists source target)
+  "O output deve ser menor valor que o tanque
+   do novo carro deve ter.")
+
+(defun question-4.18 (graph-as-lists)
+  "Considere quem sempre estamos partindo do no S.
+   Exemplo de input e output:
+   - ((S ((A 2) (B 2) (C 4))) (A ((S 2) (C 2))) (B ((S 2) (C 2)))
+      (C ((A 2) (B 2) (D 1) (E 1) (F 3))) (D ((C 1) (F 1)))
+       (E ((C 1) (F 1))) (F ((C 3) (D 1) (E 1))))
+   - ((S 0) (A 1) (B 1) (C 1) (D 2) (E 2) (F 3))")
+
+
+
