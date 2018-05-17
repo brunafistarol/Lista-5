@@ -23,6 +23,22 @@ Observações:
    realize outros testes, a avalição final da lista será feita com
    outros testes além dos apresentados abaixo ou nos exercícios do
    livro.
+5. Para que possamos tester seu trabalho pedimos que no dia seguinte ao
+   dead line estabelecido você atualize o arquivo =test.lisp=, que até o 
+   momento estava incompleto. Para fazer isso basta seguir os seguintes
+   passos: 
+
+#+BEGIN_SRC bash 
+$ cd path/to/sua-lista-5
+
+$ git remote add upstream https://github.com/classroom-ed/Lista-5
+
+$ git pull upstream master
+# Não precisa adicionar a mensagem do commit, pressione :q e depois ENTER 
+# para conluir o merge 
+
+$ git push origin master
+#+END_SRC
 
 #+BEGIN_QUOTE
 While priority queues are often implemented with heaps, they are
