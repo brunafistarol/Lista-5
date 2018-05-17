@@ -98,7 +98,7 @@
    for aciclico.")
 
 
-(defun question-4.13-a (graph-as-lists source target)
+(defun question-4.13-a (graph-as-lists source target L)
   "O output deve ser t se o carro consegue chegar a cidade 
   target e nil, caso contrtraio ")
 
