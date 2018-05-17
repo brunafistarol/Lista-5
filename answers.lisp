@@ -58,31 +58,42 @@
 
 
 (defun question-4.1-a ()
+  "Colocar as distancia de todos os nos apos vistar todos os 
+   vizinhos do no retirado da fila de prioridades em cada iteracao.
+   Se o no retirado da fila de prioridades nao tiver vizinho apenas 
+   repita as distancias encontradas ate o momento."
   '((0 (0 inf inf inf inf inf inf inf))
-    (1 "...")))
+    (1 ("distancias encotradas"))))
 
 
 (defun question-4.1-b ()
-  "A arvore a seguir e a apresentada na figura 4.1 do livro."
-  '(S (A B) C D E))
+  "A arvore a seguir e a apresentada na figura 4.9 do livro."
+  '(A 2 (C 1 (B 2 (D) 3 (E)))))
 
 
 (defun question-4.2-a ()
+  "O exemplo a seguir apresenta a tabela encontrada na figura 4.14."
   '((0 (0 inf inf inf inf inf inf inf inf inf))
-    (1 "...")))
+    (1 (0 10 inf inf inf inf inf 8))
+    (2 (0 10 inf inf inf 12 9 8))
+    (3 (0 5 10 inf inf 8 9 8))
+    (4 (0 5 6 11 inf 7 9 8))
+    (5 (0 5 5 7 14 7 9 8))
+    (6 (0 5 5 6 10 7 9 8))
+    (7 (0 5 5 6 9 7 9 8))))
 
 
 (defun question-4.2-b ()
-  "A arvore a seguir e a apresentada na figura 4.1 do livro."
-  '(S (A B) C D E))
+  "A arvore a seguir e a apresentada na figura 4.9 do livro."
+  '(A 2 (C 1 (B 2 (D) 3 (E)))))
 
 
-(defun question-4.5 (graph-as-lists source target)
+(defun gquestion-4.5 (graph-as-lists source target)
   "O output deve ser a quantidade dos menores caminhos entre 
    os dois nos.")
 
 
-(defun question-11 (graph-as-lists)
+(defun question-4.11 (graph-as-lists)
   "O output deve ser o tamanho do menor ciclo ou nil se o grafo
    for aciclico.")
 
