@@ -25,13 +25,8 @@
 	    :initform nil)
    (pre     :accessor node-pre
 	    :initarg :pre)
-   (pos     :accessor node-pos
-	    :initarg :pos)
-   (cc      :accessor node-cc
-	    :initarg :cc)
-   (color   :accessor node-color
-	    :initarg :color
-	    :initform nil)
+   (dist    :accessor node-dist
+	    :initarg :dist)
    (nbs     :accessor node-nbs
 	    :initarg :nbs
 	    :initform nil)))
@@ -45,12 +40,19 @@
 	  alists)
     (mapcar (lambda (al)
 	      (let ((u (gethash (car al) tb)))
-		(dolist (v (cadr al))
-		  (push (gethash v tb) (node-nbs u)))
+		(dolist (edge (cadr al))
+		  (push (list (gethash (car edge) tb) (cadr edge)) (node-nbs u)))
 		(setf (node-nbs u) (reverse (node-nbs u)))
 		u))
 	    alists)))
 
+;; (make-graph '((A ((B 1))) (B ((A 2) (C 3))) (C ((B 1)))))
+;; Make-graph retorna uma lista de objetos node.
+;; - O slot nbs representam as arestas que saem do nó
+;; e é uma lista composta de listas. Listas essas que seguem o
+;; padrão (NODE PESO). 
+;; - O slot dist pode ser usado para armazenar a distância encontrada
+;; relativa a algum nó e pre o nó que 
 
 (defun make-clocker (n)
   (let ((clock n))
@@ -58,16 +60,16 @@
 
 
 (defun question-4.1-a ()
-  "Colocar as distancia de todos os nos apos vistar todos os 
-   vizinhos do no retirado da fila de prioridades em cada iteracao.
-   Se o no retirado da fila de prioridades nao tiver vizinho apenas 
-   repita as distancias encontradas ate o momento."
+  "Colocar as distância de todos os nós após visitar todos os 
+   vizinhos do nó retirado da fila de prioridades em cada iteração.
+   Se o nó retirado da fila de prioridades nao tiver vizinho apenas 
+   repita as distâncias encontradas até o momento."
   '((0 (0 inf inf inf inf inf inf inf))
     (1 ("distancias encotradas"))))
 
 
 (defun question-4.1-b ()
-  "A arvore a seguir e a apresentada na figura 4.9 do livro."
+  "A árvore a seguir é a apresentada na figura 4.9 do livro."
   '(A 2 (C 1 (B 2 (D) 3 (E)))))
 
 
@@ -84,23 +86,23 @@
 
 
 (defun question-4.2-b ()
-  "A arvore a seguir e a apresentada na figura 4.9 do livro."
+  "A árvore a seguir é a apresentada na figura 4.9 do livro."
   '(A 2 (C 1 (B 2 (D) 3 (E)))))
 
 
 (defun gquestion-4.5 (graph-as-lists source target)
   "O output deve ser a quantidade dos menores caminhos entre 
-   os dois nos.")
+   os dois nós.")
 
 
 (defun question-4.11 (graph-as-lists)
-  "O output deve ser o tamanho do menor ciclo ou nil se o grafo
-   for aciclico.")
+  "O output deve ser o tamanho do menor ciclo encontrado ou
+   nil se o grafo for aciclico.")
 
 
 (defun question-4.13-a (graph-as-lists source target L)
   "O output deve ser t se o carro consegue chegar a cidade 
-  target e nil, caso contrtraio ")
+  target e nil, caso contrário ")
 
 
 (defun question-4.13-b (graph-as-lists source target)
@@ -108,7 +110,7 @@
    do novo carro deve ter.")
 
 (defun question-4.18 (graph-as-lists)
-  "Considere quem sempre estamos partindo do no S.
+  "Considere que sempre estamos partindo do nó S.
    Exemplo de input e output:
    - ((S ((A 2) (B 2) (C 4))) (A ((S 2) (C 2))) (B ((S 2) (C 2)))
       (C ((A 2) (B 2) (D 1) (E 1) (F 3))) (D ((C 1) (F 1)))
