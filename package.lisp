@@ -1,6 +1,6 @@
 
 (defpackage #:lista
-  (:use #:cl))
+  (:use #:cl #:cl-heap))
 
 (defpackage #:tests
   (:use #:cl #:lista)
