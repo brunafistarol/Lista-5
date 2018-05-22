@@ -15,31 +15,29 @@ Observações:
    Dijkstra como apresentado no livro. Notem ainda o uso de uma
    biblioteca para implementação da [[https://github.com/fcbr/graph-algorithms/blob/master/graph-algorithms.lisp#L94][fila de prioridades]]. [[https://github.com/fcbr/graph-algorithms/blob/master/graph-algorithms.asd][Aqui]] é a
    definição da biblioteca onde as outras biblioteca ‘importadas’ são
-   definidas:
-3. Usando estes códigos como ponto de partida, vcs não precisam
-   reimplementar a [[https://en.wikipedia.org/wiki/Priority_queue][fila de prioridade]]. A implementação mais próxima da
-   fila de prioridade que vimos no livro é a [[https://github.com/sfrank/minheap/blob/master/binary-heap.lisp][binary-heap]].
+   definidas. Usando estes códigos como ponto de partida, vcs não
+   precisam reimplementar a [[https://en.wikipedia.org/wiki/Priority_queue][fila de prioridade]]. A implementação mais
+   próxima da fila de prioridade que vimos no livro é a
+   [[https://github.com/sfrank/minheap/blob/master/binary-heap.lisp][binary-heap]]. Se achar necessário pode usar a biblioteca =cl-heap=.
 4. Seus testes podem usar os exemplos abaixo, mas sempre que possível
    realize outros testes, a avalição final da lista será feita com
    outros testes além dos apresentados abaixo ou nos exercícios do
    livro.
-5. Se achar necessário pode usar a biblioteca =cl-heap=.
-6. Para que possamos tester seu trabalho pedimos que no dia seguinte ao
-   dead line estabelecido você atualize o arquivo =test.lisp=, que até o 
-   momento estava incompleto. Para fazer isso basta seguir os seguintes
-   passos: 
+6. Para que possamos avaliar seu trabalho pedimos que no dia seguinte
+   ao deadline estabelecido você atualize o arquivo =test.lisp=, que
+   até o momento está incompleto. Para fazer isso basta seguir os
+   seguintes passos:
 
 #+BEGIN_SRC bash 
 $ cd path/to/sua-lista-5
-
 $ git remote add upstream https://github.com/classroom-ed/Lista-5
-
 $ git pull upstream master
-# Não precisa adicionar a mensagem do commit, pressione :q e depois ENTER 
-# para conluir o merge 
-
 $ git push origin master
 #+END_SRC
+
+No terceiro passo, não precisa adicionar a mensagem do commit,
+pressione =:=-=q= e depois ENTER para sair do editor VI
+
 
 #+BEGIN_QUOTE
 While priority queues are often implemented with heaps, they are

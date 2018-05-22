@@ -60,21 +60,27 @@
 
 
 (defun question-4.1-a ()
-  "Colocar as distância de todos os nós após visitar todos os 
-   vizinhos do nó retirado da fila de prioridades em cada iteração.
-   Se o nó retirado da fila de prioridades nao tiver vizinho apenas 
-   repita as distâncias encontradas até o momento."
-  '((0 (0 inf inf inf inf inf inf inf))
-    (1 ("distancias encotradas"))))
+  "Exemplo da figura 4.9 do livro. Adaptar para a questão."
+  '(1 (0 inf inf inf inf)
+    2 (0 4   2   inf inf)
+    3 (0 3   2   6   7)
+    4 (0 3   2   5   6)
+    5 (0 3   2   5   6)))
 
 
 (defun question-4.1-b ()
-  "A árvore a seguir é a apresentada na figura 4.9 do livro."
-  '(A 2 (C 1 (B 2 (D) 3 (E)))))
+  "Como exemplo, a árvore a seguir é a apresentada na figura 4.9 do
+  livro. Adaptar para o grafo da questão."
+  '(A 2
+    (C 1
+     (B
+      2 (D)
+      3 (E)))))
 
 
 (defun question-4.2-a ()
-  "O exemplo a seguir apresenta a tabela encontrada na figura 4.14."
+  "O exemplo a seguir apresenta a tabela encontrada na figura
+  4.14. Adaptar para o exercicio."
   '((0 (0 inf inf inf inf inf inf inf inf inf))
     (1 (0 10 inf inf inf inf inf 8))
     (2 (0 10 inf inf inf 12 9 8))
@@ -86,11 +92,11 @@
 
 
 (defun question-4.2-b ()
-  "A árvore a seguir é a apresentada na figura 4.9 do livro."
-  '(A 2 (C 1 (B 2 (D) 3 (E)))))
+  "Idem questão 4.1.b como representar a árvore."
+  ...)
 
 
-(defun gquestion-4.5 (graph-as-lists source target)
+(defun question-4.5 (graph-as-lists source target)
   "O output deve ser a quantidade dos menores caminhos entre 
    os dois nós.")
 
@@ -109,13 +115,18 @@
   "O output deve ser menor valor que o tanque
    do novo carro deve ter.")
 
+
 (defun question-4.18 (graph-as-lists)
   "Considere que sempre estamos partindo do nó S.
    Exemplo de input e output:
-   - ((S ((A 2) (B 2) (C 4))) (A ((S 2) (C 2))) (B ((S 2) (C 2)))
-      (C ((A 2) (B 2) (D 1) (E 1) (F 3))) (D ((C 1) (F 1)))
-       (E ((C 1) (F 1))) (F ((C 3) (D 1) (E 1))))
-   - ((S 0) (A 1) (B 1) (C 1) (D 2) (E 2) (F 3))")
 
+   - Input: ((S ((A 2) (B 2) (C 4))) 
+             (A ((S 2) (C 2))) 
+             (B ((S 2) (C 2)))
+             (C ((A 2) (B 2) (D 1) (E 1) (F 3))) 
+             (D ((C 1) (F 1)))
+             (E ((C 1) (F 1))) 
+             (F ((C 3) (D 1) (E 1))))
 
-
+   - Output: ((S 0) (A 1) (B 1) (C 1) (D 2) (E 2) (F 3))"
+  ...)
