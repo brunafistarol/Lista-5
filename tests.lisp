@@ -1,4 +1,4 @@
-(in-package :tests)
+(in-package :lista)
 
 (def-suite all-tests)
 
@@ -10,16 +10,16 @@
 (test test-question-4.1-a
       (mapcar #'(lambda (resposta gabarito)
 		  (when (listp resposta)
-		    (is (equal resposta gabarito)))))
-      (question-4.1-a)
-      '(1 (0 inf inf inf inf inf inf inf)
-	2 (0 1 inf inf 4 8 inf inf)
-	3 (0 1 3 inf 4 7 7 inf)
-	4 (0 1 3 4 4 7 5 inf)
-	5 (0 1 3 4 4 7 5 8)
-	6 (0 1 3 4 4 7 5 8)
-	7 (0 1 3 4 4 6 5 6)
-	8 (0 1 3 4 4 6 5 6)))
+		    (is (equal resposta gabarito))))
+	      (question-4.1-a)
+	      '(1 (0 inf inf inf inf inf inf inf)
+		2 (0 1 inf inf 4 8 inf inf)
+		3 (0 1 3 inf 4 7 7 inf)
+		4 (0 1 3 4 4 7 5 inf)
+		5 (0 1 3 4 4 7 5 8)
+		6 (0 1 3 4 4 7 5 8)
+		7 (0 1 3 4 4 6 5 6)
+		8 (0 1 3 4 4 6 5 6))))
 
 
 (test test-question-4.1-b
@@ -27,16 +27,18 @@
 		 '(A 1 (B 2 (C 1 (D) 2 (G 1 (F) 1 (H)))) 4 (E)))))
 
 (test test-question-4.2-a
-      '((0 (0 inf inf inf inf inf inf inf inf inf))
-	(1 (0 7 inf 6 inf 6 5 inf inf inf))
-	(2 (0 7 11 5 7 6 4 8 7 8))
-	(3 (0 7 11 5 7 6 4 8 7 7))
-	(4 (0 7 11 5 7 6 4 8 7 7))
-	(5 (0 7 11 5 7 6 4 8 7 7))
-	(6 (0 7 11 5 7 6 4 8 7 7))
-	(7 (0 7 11 5 7 6 4 8 7 7))
-	(8 (0 7 11 5 7 6 4 8 7 7))
-	(9 (0 7 11 5 7 6 4 8 7 7))))
+  (is (equal
+       (question-4.2-a)
+       '((0 (0 inf inf inf inf inf inf inf inf inf))
+	 (1 (0 7 inf 6 inf 6 5 inf inf inf))
+	 (2 (0 7 11 5 7 6 4 8 7 8))
+	 (3 (0 7 11 5 7 6 4 8 7 7))
+	 (4 (0 7 11 5 7 6 4 8 7 7))
+	 (5 (0 7 11 5 7 6 4 8 7 7))
+	 (6 (0 7 11 5 7 6 4 8 7 7))
+	 (7 (0 7 11 5 7 6 4 8 7 7))
+	 (8 (0 7 11 5 7 6 4 8 7 7))
+	 (9 (0 7 11 5 7 6 4 8 7 7))))))
 
 
 (test test-question-4.2-b

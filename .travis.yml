@@ -11,5 +11,5 @@ install:
 
 script:
   - cl -e '(ql:quickload :lista)
-           (unless (tests:test-lista-5)
+           (unless (lista:test-lista-5)
              (uiop:quit 1))'
