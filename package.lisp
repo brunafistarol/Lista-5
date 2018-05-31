@@ -3,6 +3,6 @@
   (:use #:cl #:cl-heap))
 
 (defpackage #:tests
-  (:use #:cl #:lista)
+  (:use #:cl #:fiveam #:lista)
   (:export #:run!
        #:test-lista-5))
