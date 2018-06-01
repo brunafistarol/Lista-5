@@ -1,6 +1,6 @@
 #+Title: Lista 5
 
-Aluno: *<SEU NOME AQUI>*
+Aluno: *Bruna Fernanda Fistarol*
 
 Antes de implementar, tenha certeza de ter terminado de fazer os
 exercícios manualmente, usando papel e caneta.
